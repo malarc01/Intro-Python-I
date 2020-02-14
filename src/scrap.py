@@ -1,13 +1,13 @@
-squares = []
-for x in range(10):
-    squares.append(x**2)
-    x = 7
-    print(x)
-x = 888
+def outer():
+    x = "local"
 
-print(squares)
-print(x)
+    def inner():
+        nonlocal x
+        x = "nl"
+        print("inner:", x)
+
+    inner()
+    print("outer:", x)
 
 
-# squares = list(map(lambda x: x**2, range(10)))
-# print(squares)
+outer()
