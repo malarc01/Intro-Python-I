@@ -1,0 +1,1 @@
+Now the file has content. This is a second line. This is the last line.
