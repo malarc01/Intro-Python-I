@@ -33,7 +33,8 @@ from datetime import datetime
 
 # get values
 c = calendar.TextCalendar(calendar.SUNDAY)
-str = c.formatmonth(datetime.now().year, datetime.now().month)
+# str = c.formatmonth(datetime.now().year, datetime.now().month)
+# str = c.formatmonth(sys.argv[1], sys.argv[1])
 
 
 user_input = input('Enter month + year... ')
@@ -49,19 +50,24 @@ currentDay = datetime.now().day
 currentMonth = datetime.now().month
 currentYear = datetime.now().year
 
-print(currentSecond)
-print(currentMinute)
-print(currentHour)
+# print(currentSecond)
+# print(currentMinute)
+# print(currentHour)
 
-print(currentDay)
-print(currentMonth)
-print(currentYear)
+# print(currentDay)
+# print(currentMonth)
+# print(currentYear)
+print('SSS',user_input)
 
+str = c.formatmonth(int(user_input[0]), int(user_input[1]))
+print(str)
+print(sys.argv)
 
-if user_input == "":
+if user_input == " ":
     print('Here is current month', str)
 else:
     print('else')
+
 
 
 # c = calendar.TextCalendar()
